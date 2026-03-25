@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        a {
+            color: #0000ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: #020269;
+        }
+        
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        .especial::before {
+            content: '⇒';
+        }
+
+         .especial::after {
+            content: '⇐';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://thaylany23.github.io/Projeto-de-Extensao/">Repositório GitHub</a></li>
+        <li><a href="http://www.youtube.com/@espacovidabv" class="especial">Canal do YouTube</a></li>
+        <li><a href="http://127.0.0.1:5500/ProjetodeExtens%C3%A3o2/index.html">Site no Canal</a></li>
+    </ul>
+</body>
+</html>

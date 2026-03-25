@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tags em HTML — Tooltip CSS</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 10px 0; }
+
+    /* container da palavra e tooltip */
+    .has-tooltip { position: relative; display: inline-block; cursor: default; }
+
+    /* caixa do tooltip (invisível por padrão) */
+    .has-tooltip .tooltip {
+      position: absolute;
+      left: 0;
+      top: 125%;
+      white-space: nowrap;
+      padding: 6px 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      background: #222;
+      color: #fff;
+      font-size: 0.9rem;
+      transform-origin: top left;
+      opacity: 0;
+      transform: translateY(6px) scale(0.98);
+      transition: opacity .15s ease, transform .15s ease;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* triângulo */
+    .has-tooltip .tooltip::after {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 10px;
+      border-width: 6px 6px 0 6px;
+      border-style: solid;
+      border-color: #222 transparent transparent transparent;
+    }
+
+    /* mostrar ao passar o mouse */
+    .has-tooltip:hover .tooltip,
+    .has-tooltip:focus-within .tooltip {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Tags em HTML</h1>
+  <h2>Passe o mouse sobre os termos para descobrir qual tag deverá utilizar.</h2>
+
+  <ul>
+    <li><span class="has-tooltip">Parágrafo
+      <span class="tooltip">&lt;p&gt;</span>
+    </span></li>
+
+    <li><span class="has-tooltip">Títulos
+      <span class="tooltip">&lt;h1&gt; a &lt;h6&gt;</span>
+    </span></li>
+
+    <li><span class="has-tooltip">Imagens
+      <span class="tooltip">&lt;img&gt;</span>
+    </span></li>
+
+    <li><span class="has-tooltip">Abreviações
+      <span class="tooltip">&lt;abbr&gt;</span>
+    </span></li>
+
+    <li><span class="has-tooltip">Código-fonte
+      <span class="tooltip">&lt;code&gt;</span>
+    </span></li>
+
+    <li><span class="has-tooltip">Listas numeradas
+      <span class="tooltip">&lt;ol&gt;</span>
+    </span></li>
+
+    <li><span class="has-tooltip">Listas com demarcadores
+      <span class="tooltip">&lt;ul&gt;</span>
+    </span></li>
+  </ul>
+</body>
+</html>

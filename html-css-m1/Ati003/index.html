@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos legais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        video {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        video:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>🎬 Vídeos legais para assistir</h1>
+
+    <div class="container">
+        <a href="primeiro.html" target="_self" rel="next">
+            <video src="video/video1.mp4" width="450"></video>
+        </a>
+        <a href="sengundo.html" target="_self" rel="next">
+            <video src="video/video2.mp4" width="450"></video>
+        </a>
+        <a href="terceiro.html" target="_self" rel="next">
+            <video src="video/video3.mp4" width="450"></video>
+        </a>
+        <a href="quarto.html" target="_self" rel="next">
+            <video src="video/video4.mp4" width="450"></video>
+        </a>
+    </div>
+</body>
+</html>
